@@ -1,0 +1,6 @@
+# UIFont-runtime
+字体根据屏幕适配
+根据runtime，以iphone6为基础扩展字体倍数
+当xib或者sb加载中的时候不走runtime的方法 ， 用分类在label的awake方法里做font倍数调整
+
+其实还有一种方法 就是用继承，给label增加一个可以在xib或者sb显示的属性， 重写这个属性的set方法，在里面设置font的倍数
